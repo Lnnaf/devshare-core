@@ -1,0 +1,22 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/dev_share_db
+    username: postgres
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+graphql:
+  playground:
+    endpoint: /graphql
+    subscriptionEndpoint: /subscriptions
+    enabled: true
+    pageTitle: Playground
+    cdn:
+      enabled: false
+      version: latest
+    static-path:
+      base: /api/vendor/playground/
