@@ -1,0 +1,19 @@
+type Post {
+    id: String
+    author: User
+    content: String
+    createdDate: String
+    modifiedDate: String
+    title: String
+    shortDescription: String
+    viewed: Int
+    thumbImageUrl: String
+    modifiedBy: User
+    categories: [Category]
+}
+extend type Query {
+    getPostsByAuthorId(authorId: Int): [Post]
+    getPostByPostId(postId: Int): Post
+    getPostsByCategoryIds(categoryIds: [Int]): [Post]
+    getPostsSortedByNewest: [Post]
+}

@@ -1,5 +1,7 @@
 server:
   port: 8080
+  servlet:
+    context-path: /api/v1
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/dev_share_db
@@ -9,14 +11,3 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-graphql:
-  playground:
-    endpoint: /graphql
-    subscriptionEndpoint: /subscriptions
-    enabled: true
-    pageTitle: Playground
-    cdn:
-      enabled: false
-      version: latest
-    static-path:
-      base: /api/vendor/playground/

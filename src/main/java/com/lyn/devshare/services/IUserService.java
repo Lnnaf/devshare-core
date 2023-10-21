@@ -1,7 +1,7 @@
 package com.lyn.devshare.services;
 
-import com.lyn.devshare.dto.User;
+import com.lyn.devshare.dto.UserDto;
 
 public interface IUserService {
-    public User getUserById(Long id);
+    public UserDto getUserById(Long id);
 }
